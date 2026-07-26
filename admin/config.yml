@@ -5,8 +5,8 @@ backend:
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
-site_url: "https://YOUR-SITE.netlify.app"
-display_url: "https://YOUR-SITE.netlify.app"
+site_url: "https://abhizworld.netlify.app"
+display_url: "https://abhizworld.netlify.app"
 
 logo_url: "/assets/images/logo.png"
 
