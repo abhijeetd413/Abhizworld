@@ -3,7 +3,7 @@
 backend:
   name: github
   repo: abhijeetd413/Abhizworld
-  branch: master # 👈 Changed from main to master
+  branch: master #
 
 media_folder: "assets/images"
 public_folder: "/Abhizworld/assets/images"
