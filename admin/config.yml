@@ -6,7 +6,7 @@ backend:
   branch: master # 👈 Changed from main to master
 
 media_folder: "assets/images"
-public_folder: "/assets/images"
+public_folder: "/Abhizworld/assets/images"
 
 collections:
   - name: "posts"
