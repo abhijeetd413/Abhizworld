@@ -8,6 +8,10 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
+# Custom Domain Production Settings
+url: "https://abhizworld.com" # 👈 Your custom domain added
+baseurl: ""                     # 👈 Left empty so everything loads from root
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -33,8 +37,10 @@ paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+# Make sure Jekyll builds both your standalone pages and your Sveltia CMS folder
 include:
   - _pages
+  - admin
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -113,6 +119,3 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-  include:
-  - admin
-
