@@ -1,3 +1,59 @@
+# yaml-language-server: $schema=https://unpkg.com
+
+backend:
+  name: github
+  repo: abhijeetd413/Abhizworld
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    label_singular: "Post"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "single" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        required: false
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+      - { label: "Header Image", name: "header_image", widget: "image", required: false, media_folder: "assets/images", public_folder: "/assets/images" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages (About, Contact, etc.)"
+    folder: "_pages"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "single" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "navigation"
+    label: "Navigation Menu Layout"
+    files:
+      - label: "Main Navigation Bar"
+        name: "navigation_file"
+        file: "_data/navigation.yml"
+        fields:
+          - label: "Main Links"
+            name: "main"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "URL Path", name: "url", widget: "string" }
 # yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
 
 backend:
