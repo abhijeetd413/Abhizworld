@@ -5,7 +5,17 @@
     <title>Content Manager</title>
   </head>
   <body>
-    <!-- Correct script include -->
-    <script src="https://unpkg.com/netlify-cms-app@^2.15.72/dist/netlify-cms.js"></script>
+    <!-- Netlify CMS script -->
+    <script src="https://unpkg.com/netlify-cms-app@latest/dist/netlify-cms.js"></script>
+
+    <!-- Fallback message if script fails -->
+    <noscript>
+      You need to enable JavaScript to run the CMS.
+    </noscript>
+    <div id="cms-fallback" style="font-family:sans-serif; padding:20px;">
+      If you see this message and the CMS doesn’t load,
+      check your browser console for errors or try another browser
+      (Chrome/Firefox often bypass Edge’s tracking prevention).
+    </div>
   </body>
 </html>
